@@ -10,7 +10,7 @@ import {
   selectIsPlaying,
 } from "@/lib/redux";
 import { useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "@/lib/redux";
 
 const PlayerDocker = () => {
   const dispatch = useDispatch();

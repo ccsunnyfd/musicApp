@@ -12,8 +12,7 @@ import {
   selectCurrentSongs,
   selectIsPlaying,
 } from "@/lib/redux/slices/songSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { songSlice } from "@/lib/redux";
+import { useDispatch, useSelector, songSlice } from "@/lib/redux";
 import { useCallback, useEffect } from "react";
 import SongList from "./songs/SongList";
 

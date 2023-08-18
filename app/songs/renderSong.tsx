@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import PlayPause from "./PlayPause";
+import PlayPause from "../components/PlayPause";
 import Image from "next/image";
 import { Song } from "@/lib/redux";
 
