@@ -10,7 +10,7 @@ import {
   songSlice,
   selectActiveSong,
   selectIsPlaying,
-  type Song,
+  type RelatedSong,
   selectCurrentSongs,
   selectActiveSongIdx,
 } from "@/lib/redux";
@@ -65,7 +65,7 @@ const TopPlay = () => {
         </div>
 
         <div className="mt-4 flex flex-col gap-1">
-          {topPlays?.map((song: Song, idx: number) => (
+          {topPlays?.map((song: RelatedSong, idx: number) => (
             <TopChartCard
               key={song.key}
               song={song}

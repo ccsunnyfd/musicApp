@@ -1,9 +1,9 @@
-import { Song } from "@/lib/redux";
+import { RelatedSong } from "@/lib/redux";
 import Image from "next/image";
 
 type TrackProps = {
   isPlaying: boolean;
-  activeSong: Song | undefined;
+  activeSong: RelatedSong | undefined;
 };
 
 const Track = ({ isPlaying, activeSong }: TrackProps) => {
@@ -14,9 +14,9 @@ const Track = ({ isPlaying, activeSong }: TrackProps) => {
           isPlaying && activeSong ? "animate-[spin_3s_linear_infinite]" : ""
         } hidden sm:block h-16 w-16 mr-4`}
       >
-        {(activeSong as Song)?.images?.coverart && (
+        {(activeSong as RelatedSong)?.images?.coverart && (
           <Image
-            src={(activeSong as Song)?.images?.coverart}
+            src={(activeSong as RelatedSong)?.images?.coverart}
             alt="cover art"
             className="rounded-full"
             width={64}
@@ -26,13 +26,13 @@ const Track = ({ isPlaying, activeSong }: TrackProps) => {
       </div>
       <div className="w-[50%]">
         <p className="truncate text-white font-bold text-lg">
-          {(activeSong as Song)?.title
-            ? (activeSong as Song)?.title
+          {(activeSong as RelatedSong)?.title
+            ? (activeSong as RelatedSong)?.title
             : "No active Song"}
         </p>
         <p className="truncate text-gray-300">
-          {(activeSong as Song)?.subtitle
-            ? (activeSong as Song)?.subtitle
+          {(activeSong as RelatedSong)?.subtitle
+            ? (activeSong as RelatedSong)?.subtitle
             : "No active Song"}
         </p>
       </div>

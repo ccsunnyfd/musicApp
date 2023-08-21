@@ -1,8 +1,8 @@
-import { Song } from "@/lib/redux";
+import { RelatedSong } from "@/lib/redux";
 import { ReactNode } from "react";
 
 type renderSongProps = {
-  song: Song;
+  song: RelatedSong;
   isActive: boolean;
   isPlaying: boolean;
   idx: number;
@@ -17,8 +17,8 @@ type ListProps = {
     idx,
     onPlayPause,
   }: renderSongProps) => ReactNode;
-  data: Song[];
-  activeSong: Song | undefined;
+  data: RelatedSong[];
+  activeSong: RelatedSong | undefined;
   isPlaying: boolean;
   onPlayPause: (idx: number) => void;
 };

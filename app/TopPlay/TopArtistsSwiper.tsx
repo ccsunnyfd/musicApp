@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { type Song } from "@/lib/redux";
+import { type RelatedSong } from "@/lib/redux";
 import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/free-mode";
 
-const TopArtistsSwiper = ({ topPlays }: { topPlays: Song[] }) => {
+const TopArtistsSwiper = ({ topPlays }: { topPlays: RelatedSong[] }) => {
   return (
     <div className="w-full flex flex-col mt-8">
       <div className="flex flex-row justify-between items-center">

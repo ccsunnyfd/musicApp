@@ -1,7 +1,7 @@
 "use client";
 
 import { type SyntheticEvent, useCallback, useState } from "react";
-import { type Song } from "@/lib/redux";
+import { type RelatedSong } from "@/lib/redux";
 
 import Controls from "./Controls";
 import Player from "./Player";
@@ -10,7 +10,7 @@ import Track from "./Track";
 import VolumeBar from "./VolumeBar";
 
 type MusicPlayerProps = {
-  activeSong: Song | undefined;
+  activeSong: RelatedSong | undefined;
   togglePlayPause: () => void;
   isPlaying: boolean;
   onNext: (shuffleMode: boolean) => void;
@@ -75,7 +75,7 @@ const MusicPlayer = ({
         />
         {activeSong && (
           <Player
-            activeSong={activeSong as Song}
+            activeSong={activeSong as RelatedSong}
             volume={volume}
             isPlaying={isPlaying}
             seekTime={seekTime}

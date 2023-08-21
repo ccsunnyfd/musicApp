@@ -1,10 +1,10 @@
-import { Song } from "@/lib/redux";
+import { RelatedSong } from "@/lib/redux";
 import PlayPause from "../components/PlayPause";
 import Image from "next/image";
 import Link from "next/link";
 
 type TopChartCardProps = {
-  song: Song;
+  song: RelatedSong;
   idx: number;
   isPlaying: boolean;
   isActive: boolean;

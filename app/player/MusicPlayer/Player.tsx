@@ -1,11 +1,11 @@
 "use client";
 
 /* eslint-disable jsx-a11y/media-has-caption */
-import { Song } from "@/lib/redux";
+import { RelatedSong } from "@/lib/redux";
 import { useRef, useEffect, useCallback, ReactEventHandler } from "react";
 
 type PlayerProps = {
-  activeSong: Song;
+  activeSong: RelatedSong;
   isPlaying: boolean;
   volume: number;
   seekTime: number;

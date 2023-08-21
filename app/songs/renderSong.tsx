@@ -2,10 +2,10 @@ import Link from "next/link";
 
 import PlayPause from "../components/PlayPause";
 import Image from "next/image";
-import { Song } from "@/lib/redux";
+import { RelatedSong } from "@/lib/redux";
 
 type renderSongProps = {
-  song: Song;
+  song: RelatedSong;
   isActive: boolean;
   isPlaying: boolean;
   idx: number;

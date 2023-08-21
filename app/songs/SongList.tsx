@@ -1,6 +1,6 @@
 import List from "./List";
 import renderSong from "./renderSong";
-import { Song } from "@/lib/redux";
+import { RelatedSong } from "@/lib/redux";
 
 const SongList = ({
   data,
@@ -8,8 +8,8 @@ const SongList = ({
   isPlaying,
   onPlayPause,
 }: {
-  data: Song[];
-  activeSong: Song | undefined;
+  data: RelatedSong[];
+  activeSong: RelatedSong | undefined;
   isPlaying: boolean;
   onPlayPause: (idx: number) => void;
 }) => {
