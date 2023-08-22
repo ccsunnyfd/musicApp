@@ -9,7 +9,7 @@ type RelatedSongsProps = {
   artistId?: string;
   isPlaying: boolean;
   activeSong: RelatedSong | undefined;
-  onPlayPauseClick: (idx: number) => void;
+  onPlayPauseClick?: (idx: number) => void;
 };
 
 const RelatedSongs = ({
@@ -37,7 +37,7 @@ const RelatedSongs = ({
             idx={idx}
             isPlaying={isPlaying && isActive(song)}
             isActive={isActive(song)}
-            onPlayPauseClick={() => onPlayPauseClick(idx)}
+            onPlayPauseClick={() => onPlayPauseClick && onPlayPauseClick(idx)}
           />
         ))}
       </div>

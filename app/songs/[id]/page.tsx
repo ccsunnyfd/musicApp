@@ -14,7 +14,7 @@ import {
   useGetSongRelatedQuery,
 } from "@/app/services/shazamCore";
 import Loader from "@/app/components/Loader";
-import Error from "@/app/components/Loader";
+import Error from "@/app/components/Error";
 import DetailsHeader from "./DetailsHeader";
 import RelatedSongs from "./RelatedSongs";
 import { useCallback, useEffect } from "react";
@@ -73,7 +73,7 @@ const SongDetails = ({ params }: { params: { id: string } }) => {
   }
 
   if (getSongRelatedError || getSongDetailsError) {
-    return <Error title="Searching song error" />;
+    return <Error />;
   }
 
   return (
